@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=10">
+  <script src="script.js"></script>
+  <title>{{{ p_name }}}</title>
+  <style>
+    img {
+      height: 10%;
+      width: 10%;
+    }
+
+    .logo {
+      width: 50%;
+      height: 50%;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <a href="http://localhost:1337/">
+        <img src="/images/logo.svg" alt="5">
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <img src="/images/{{{ p_image }}}" alt="a">
+    <h1>{{{ p_name }}}</h1>
+    <h2>{{{ p_cost }}}</h2>
+    <button onclick="<form action='http://localhost:1337/'>">Добавить в корзину</button>
+  </main>
+
+</body>
+
+</html>

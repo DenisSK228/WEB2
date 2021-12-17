@@ -1,11 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ПятёрОчка</title>
+    <style>
+        .left,
+        .contacts,
+        .logo,
+        .cart {
+            display: inline-block;
+        }
+
+        .a,
+        .b,
+        .c {
+            width: 12%;
+            height: 12%;
+        }
+
+        .cart {
+            float: right
+        }
+    </style>
 </head>
 
 <body>
@@ -13,18 +32,67 @@
     <header>
         <div class="logo">
             <a href="http://localhost:1337/">
-                <img src="https://5ka.ru/img/header-logo.3062f8b3.svg" alt="5">
+                <img src="/images/logo.svg" alt="5">
             </a>
         </div>
 
+        <div class="contacts">
+            <a href="">
+                8-800-555-55-05<br>
+            </a>
+            Горячая линия
+        </div>
+
+        <div class="left">
+            <a href="">
+                Войти
+            </a>
+            <button>
+                <img src="" alt="o">
+            </button>
+        </div>
+        <div class="cart">
+            <a href="/cart">Корзина</a>
+        </div>
     </header>
 
     <main>
+        <div class="products">
+
+            <div class="product_1">
+                <a href="/products/product_1">
+                    <img src="/images/juice.webp" alt="1" class="a"><br>
+                    Нектар Добрый, мультифрукт, 2 л<br>
+                    от 110p
+                </a>
+            </div>
+
+
+            <div class="product_2">
+                <a href="/products/product_2">
+                    <img src="/images/tarhun.webp" alt="2" class="b"><br>
+                    Напиток ТАРХУН 1.0л<br>
+                    от 75p
+                </a>
+            </div>
+
+
+            <div class="product_3">
+                <a href="/products/product_3">
+                    <img src="/images/chocolate.webp" alt="3" class="c"><br>
+                    Шоколад Бабаевский, элитный, 75% какао, 200 г<br>
+                    от 120p
+                </a>
+            </div>
+
+        </div>
 
     </main>
 
     <footer>
-
+        <a href="" class="pyat-mini">
+            <img src="https://5ka.ru/img/footer-logo.3062f8b3.svg" alt="5">
+        </a>
     </footer>
 
 </body>
