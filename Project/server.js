@@ -11,17 +11,20 @@ let data = {
         "product_1": {
             "p_image": "juice.webp",
             "p_name": "Нектар Добрый, мультифрукт, 2 л",
-            "p_cost": "от 110p"
+            "p_cost": "от 110p",
+            "p_id":"Сок Добрый"
         },
         "product_2": {
             "p_image": "tarhun.webp",
             "p_name": "Напиток ТАРХУН 1.0л",
-            "p_cost": "от 75p"
+            "p_cost": "от 75p",
+            "p_id":"Тархун"
         },
         "product_3": {
             "p_image": "chocolate.webp",
             "p_name": "Шоколад Бабаевский, элитный, 75% какао, 200 г",
-            "p_cost": "от 120p"
+            "p_cost": "от 120p",
+            "p_id":"Бабаевский"
         }
     }
 
@@ -33,10 +36,6 @@ let cart = {
 
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/templates/index.html")
-});
-
-app.get("a", function (req, res) {
-    res.render('123')
 });
 
 app.get('/products/:ukn', function (req, res) {
@@ -52,6 +51,11 @@ app.get("/cart", function (req, res) {
 app.get("/pay", function (req, res) {
     res.render(__dirname + "/templates/Pay.hbs")
 })
+
+app.get("/log", function (req, res) {
+    res.sendFile(__dirname + "/templates/login.html")
+})
+
 
 
 app.listen(1337, function () {

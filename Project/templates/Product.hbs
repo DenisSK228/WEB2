@@ -33,7 +33,10 @@
     <img src="/images/{{{ p_image }}}" alt="a">
     <h1>{{{ p_name }}}</h1>
     <h2>{{{ p_cost }}}</h2>
-    <button onclick="<form action='http://localhost:1337/'>">Добавить в корзину</button>
+    <button onclick="PUT /Project/server.js
+                     Host: localhost
+                     Content-type: script/js
+                     cart.push({{{p_id}}})">Добавить в корзину</button>
   </main>
 
 </body>
