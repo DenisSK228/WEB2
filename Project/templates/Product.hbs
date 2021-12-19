@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=10">
-  <script src="script.js"></script>
+  {{!-- <script src="/js/script.js" defer></script> --}}
   <title>{{{ p_name }}}</title>
   <style>
     img {
@@ -33,10 +33,10 @@
     <img src="/images/{{{ p_image }}}" alt="a">
     <h1>{{{ p_name }}}</h1>
     <h2>{{{ p_cost }}}p</h2>
-    <button onclick="PUT /Project/server.js
-                     Host: localhost
-                     Content-type: script/js
-                     cart.push({{{p_id}}})">Добавить в корзину</button>
+    <form action="/add_cart" method="get">
+    <input type="radio" name="tovar" value="{{{ id }}}" checked style="display: none;">
+    <input type="submit" value="Добавить в корзину">
+    </form>
   </main>
 
 </body>
