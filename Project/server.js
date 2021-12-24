@@ -33,7 +33,7 @@ let data = {
 }
 
 let cart = []
-cart.push()
+cart.push();
 
 app.get("/", function (req, res) {
     res.sendFile(__dirname + "/templates/index.html")
@@ -41,15 +41,17 @@ app.get("/", function (req, res) {
 
 app.get('/products/:ukn', function (req, res) {
     let a = req.params.ukn;
-    let scs = { id : a[p_name]}
+    let scs = { id: a }
     Object.assign(scs, data.products[a]);
-    // console.log(scs, a);
+    console.log(scs, a);
     scs["id"] = a;
+    cart.push()
     res.render('Product.hbs', scs);
+
 });
 
 app.get("/cart", function (req, res) {
-    res.render(__dirname + "/templates/Cart.hbs")
+    res.render(__dirname + "/templates/Cart.hbs", cart)
 });
 
 app.get("/pay", function (req, res) {
