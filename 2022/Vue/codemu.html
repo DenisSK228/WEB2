@@ -56,6 +56,64 @@
                 {{user}} - {{index + 1}}
             </li>
         </ul>
+
+        <b><br>3.4<br><br></b>
+
+        <ul>
+            <li v-for="emp in employees">{{emp}}</li>
+        </ul>
+
+        <b><br>3.5<br><br></b>
+
+        <ul>
+            <li v-for="(money, emp) in employees">{{emp}} - {{money}}</li>
+        </ul>
+
+        <b><br>3.6<br><br></b>
+
+        <ul>
+            <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index}}</li>
+        </ul>
+
+        <b><br>3.7<br><br></b>
+
+        <ul>
+            <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index + 1}}</li>
+        </ul>
+
+        <b><br>3.8<br><br></b>
+
+        <ul>
+            <!-- <li v-for="a in hrefs"><a href="{{a.href}}">{{a.text}}</a></li> -->
+        </ul>
+
+        <b><br>3.9<br><br></b>
+
+        <ul>
+            <li v-for="prod in products">{{prod.name}}, price:{{prod.price}}, summary:{{sumPrice}} Пока не работает,
+                потом допилю</li>
+        </ul>
+
+        <b><br>3.10<br><br></b>
+
+        <ul>
+            <div v-for="it in iteration">
+                <li>{{it}}</li>
+                <li></li>
+                <li></li><br>
+            </div>
+        </ul>
+
+        <!-- <b><br>4.1<br><br></b>
+
+        <div id="app">
+            {{ show() }}
+        </div> -->
+
+        <b><br>4.3<br><br></b>
+
+
+
     </div>
 </body>
 
@@ -75,7 +133,26 @@
             obj: { a: 1, b: 2, c: 3 },
             Arr: [1, 2, 3, 4, 5],
             users: ['user1', 'user2', 'user3'],
-            users2: ['user1', 'user2', 'user3'],
+            employees: {
+                employee1: '100$',
+                employee2: '200$',
+                employee3: '300$'
+            },
+            hrefs: [
+                { href: '1.html', text: 'ссылка 1' },
+                { href: '2.html', text: 'ссылка 2' },
+                { href: '3.html', text: 'ссылка 3' },
+            ],
+            products: [
+                { name: 'product1', price: 100, quantity: 5 },
+                { name: 'product2', price: 200, quantity: 4 },
+                { name: 'product3', price: 300, quantity: 3 },
+            ],
+            iteration: ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+            nums: {
+                num1: 1,
+                num2: 2,
+            },
 
         },
         computed: {
@@ -91,7 +168,21 @@
             sumObj() {
                 return (this.obj.a) + (this.obj.b) + (this.obj.c)
             },
+            sumPrice() {
+                // return (this.products.price) * (this.product.quantity)
+            },
+            sumOfNums() {
+                return this.nums.num1 + this.nums.num2
+            }
 
+        },
+        methods: {
+            show: function () {
+                alert('!');
+            },
+            sumOfNums_2: function () {
+                alert(sumOfNums)
+            }
         }
     })
 </script>
