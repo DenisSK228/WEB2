@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+</head>
+
+<body>
+
+    <div id="app">
+        <b> 2.1 <br><br></b>
+        {{name}}
+        {{surname}}
+
+        <b><br> <br>2.2<br><br></b>
+
+        <input type="text" v-model="num"> = <span>{{Numsq}}</span>
+
+        <b><br> <br>2.3<br><br></b>
+
+        <input type="text" v-model="num1"> + <input type="text" v-model="num2"> + <input type="text" v-model="num3">
+        = <span>{{sumNum}}</span>
+
+        <b><br> <br>2.4<br><br></b>
+
+        <input type="text" v-model="arr[0]"> + <input type="text" v-model="arr[1]"> + <input type="text"
+            v-model="arr[2]"> = <span>{{sumMas}}</span>
+
+        <b><br> <br>2.5<br><br></b>
+
+        <input type="text" v-model="obj.a"> + <input type="text" v-model="obj.b"> + <input type="text" v-model="obj.c">
+        = <span>{{sumObj}}</span><br><br>
+
+        <b>3.1<br><br></b>
+
+        <ul>
+            <li v-for="nums in Arr">{{nums}}</li>
+        </ul>
+
+        <b><br>3.2<br><br></b>
+
+        <ul>
+            <li v-for="(user, index) in users">
+                {{user}} - {{index}}
+            </li>
+        </ul>
+
+        <b><br>3.3<br><br></b>
+
+        <ul>
+            <li v-for="(user, index) in users">
+                {{user}} - {{index + 1}}
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
+
+<script>
+    let app = new Vue({
+        el: "#app",
+        data: {
+            name: 'Вася',
+            surname: 'Иванов',
+            num: 5,
+            num1: 1,
+            num2: 2,
+            num3: 3,
+            arr: [1, 2, 3],
+            obj: { a: 1, b: 2, c: 3 },
+            Arr: [1, 2, 3, 4, 5],
+            users: ['user1', 'user2', 'user3'],
+            users2: ['user1', 'user2', 'user3'],
+
+        },
+        computed: {
+            Numsq() {
+                return Number(this.num) * Number(this.num)
+            },
+            sumNum() {
+                return Number(this.num1) + Number(this.num2) + Number(this.num3)
+            },
+            sumMas() {
+                return Number(this.arr[0]) + Number(this.arr[1]) + Number(this.arr[2])
+            },
+            sumObj() {
+                return (this.obj.a) + (this.obj.b) + (this.obj.c)
+            },
+
+        }
+    })
+</script>
