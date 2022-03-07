@@ -89,10 +89,10 @@
 
         <b><br>3.9<br><br></b>
 
-        <ul>
-            <li v-for="prod in products">{{prod.name}}, price:{{prod.price}}, summary:{{sumPrice}} Пока не работает,
+        <!-- <ul>
+            <li v-for="prod in products">{{prod.name}}, price: {{prod.price}}, summary: {{sumPrice(prod.price, prod.quantity)}} Пока не работает,
                 потом допилю</li>
-        </ul>
+        </ul> -->
 
         <b><br>3.10<br><br></b>
 
@@ -104,15 +104,50 @@
             </div>
         </ul>
 
-        <!-- <b><br>4.1<br><br></b>
+        <!-- <b><br>4.1<br><br></b> -->
 
-        <div id="app">
-            {{ show() }}
-        </div> -->
+        <!-- {{ show() }} -->
 
-        <b><br>4.3<br><br></b>
+        <b><br><br>4.2<br><br></b>
 
+        <!-- {{sumOfNums()}} -->
 
+        <b><br><br>4.3<br><br></b>
+
+        <button v-on:click="hello">hello</button>
+
+        <b><br><br>4.4<br><br></b>
+
+        <button v-on:mouseover="hello">hello</button>
+
+        <b><br><br>4.4<br><br></b>
+
+        <button v-on:click="sumOfNums2">1+2+3</button>
+
+        <b><br><br>5.1<br><br></b>
+
+        <span>{{text2}}</span><br>
+        <button v-on:click="textchange_abcde">abcde</button> <button v-on:click="textchange_12345">12345</button>
+
+        <b><br><br>5.2 / 5.3 / 5.4 / 5.5 / 5.6<br><br></b>
+
+        <!-- <button v-on:click=""></button> -->
+
+        <button v-on:click="Add">Add "!!!" in array</button>
+        <button v-on:click="Remove">Remove first word in array</button>
+        <button v-on:click="Pop">Remove last word in array</button>
+        <button v-on:click="Reverse">Reverse array</button>
+        <button v-on:click="Sort">Sort array</button>
+        <ul>
+            <li>{{mas}}</li>
+        </ul>
+
+        <b><br><br>5.7<br><br></b>
+
+        <ul>
+            <button v-on:click="Filter">Filter that array</button>
+            <li>{{lastarray}}</li>
+        </ul>
 
     </div>
 </body>
@@ -148,11 +183,16 @@
                 { name: 'product2', price: 200, quantity: 4 },
                 { name: 'product3', price: 300, quantity: 3 },
             ],
-            iteration: ["a", "b", "c", "d", "e", "f", "g", "h", "i"],
+            iteration: ["a", "b", "c"],
             nums: {
                 num1: 1,
                 num2: 2,
+                num3: 3
             },
+            text: "hello",
+            text2: "12345",
+            mas: ["Oh", "hell", "ye", "it", "is", "working"],
+            lastarray: [1, 26, 4, -2, 0, 10, -15]
 
         },
         computed: {
@@ -168,21 +208,60 @@
             sumObj() {
                 return (this.obj.a) + (this.obj.b) + (this.obj.c)
             },
-            sumPrice() {
-                // return (this.products.price) * (this.product.quantity)
-            },
-            sumOfNums() {
-                return this.nums.num1 + this.nums.num2
-            }
+            // sumPrice(quantity, price) {
+            //     return (this.products.price) * (this.product.quantity)
+            // },
+
+
 
         },
         methods: {
             show: function () {
                 alert('!');
             },
-            sumOfNums_2: function () {
-                alert(sumOfNums)
+            sumOfNums: function () {
+                alert(this.nums.num1 + this.nums.num2)
+            },
+            hello() {
+                alert(this.text)
+            },
+            sumOfNums2: function () {
+                alert(this.nums.num1 + this.nums.num2 + this.nums.num3)       //    <--4.5
+            },
+            textchange_abcde: function () {
+                this.text2 = "abcde"
+            },
+            textchange_12345: function () {
+                this.text2 = "12345"
+            },
+            Add: function () {
+                this.mas.push("!!!")
+            },
+            Remove: function () {
+                this.mas.shift()
+            },
+            Pop: function () {
+                this.mas.pop()
+            },
+            Reverse: function () {
+                this.mas.reverse()
+            },
+            Sort: function () {
+                this.mas.sort()
+            },
+            Filter: function () {
+                let newarray = this.lastarray.filter(function (elem) {
+                    if (Number(elem) > 0 && Number(elem) < 10) {
+                        return true
+                    } else {
+                        return false
+                    }
+                })
+                this.lastarray = newarray
             }
+
         }
     })
+
+
 </script>
