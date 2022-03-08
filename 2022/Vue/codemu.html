@@ -11,145 +11,170 @@
 
 <body>
 
-    <div id="app">
-        <b> 2.1 <br><br></b>
-        {{name}}
-        {{surname}}
+    <h2>
+        <div id="app">
+            <b> 2.1 <br><br></b>
+            {{name}}
+            {{surname}}
 
-        <b><br> <br>2.2<br><br></b>
+            <b><br> <br>2.2<br><br></b>
 
-        <input type="text" v-model="num"> = <span>{{Numsq}}</span>
+            <input type="text" v-model="num"> = <span>{{Numsq}}</span>
 
-        <b><br> <br>2.3<br><br></b>
+            <b><br> <br>2.3<br><br></b>
 
-        <input type="text" v-model="num1"> + <input type="text" v-model="num2"> + <input type="text" v-model="num3">
-        = <span>{{sumNum}}</span>
+            <input type="text" v-model="num1"> + <input type="text" v-model="num2"> + <input type="text" v-model="num3">
+            = <span>{{sumNum}}</span>
 
-        <b><br> <br>2.4<br><br></b>
+            <b><br> <br>2.4<br><br></b>
 
-        <input type="text" v-model="arr[0]"> + <input type="text" v-model="arr[1]"> + <input type="text"
-            v-model="arr[2]"> = <span>{{sumMas}}</span>
+            <input type="text" v-model="arr[0]"> + <input type="text" v-model="arr[1]"> + <input type="text"
+                v-model="arr[2]"> = <span>{{sumMas}}</span>
 
-        <b><br> <br>2.5<br><br></b>
+            <b><br> <br>2.5<br><br></b>
 
-        <input type="text" v-model="obj.a"> + <input type="text" v-model="obj.b"> + <input type="text" v-model="obj.c">
-        = <span>{{sumObj}}</span><br><br>
+            <input type="text" v-model="obj.a"> + <input type="text" v-model="obj.b"> + <input type="text"
+                v-model="obj.c">
+            = <span>{{sumObj}}</span><br><br>
 
-        <b>3.1<br><br></b>
+            <b>3.1<br><br></b>
 
-        <ul>
-            <li v-for="nums in Arr">{{nums}}</li>
-        </ul>
+            <ul>
+                <li v-for="nums in Arr">{{nums}}</li>
+            </ul>
 
-        <b><br>3.2<br><br></b>
+            <b><br>3.2<br><br></b>
 
-        <ul>
-            <li v-for="(user, index) in users">
-                {{user}} - {{index}}
-            </li>
-        </ul>
+            <ul>
+                <li v-for="(user, index) in users">
+                    {{user}} - {{index}}
+                </li>
+            </ul>
 
-        <b><br>3.3<br><br></b>
+            <b><br>3.3<br><br></b>
 
-        <ul>
-            <li v-for="(user, index) in users">
-                {{user}} - {{index + 1}}
-            </li>
-        </ul>
+            <ul>
+                <li v-for="(user, index) in users">
+                    {{user}} - {{index + 1}}
+                </li>
+            </ul>
 
-        <b><br>3.4<br><br></b>
+            <b><br>3.4<br><br></b>
 
-        <ul>
-            <li v-for="emp in employees">{{emp}}</li>
-        </ul>
+            <ul>
+                <li v-for="emp in employees">{{emp}}</li>
+            </ul>
 
-        <b><br>3.5<br><br></b>
+            <b><br>3.5<br><br></b>
 
-        <ul>
-            <li v-for="(money, emp) in employees">{{emp}} - {{money}}</li>
-        </ul>
+            <ul>
+                <li v-for="(money, emp) in employees">{{emp}} - {{money}}</li>
+            </ul>
 
-        <b><br>3.6<br><br></b>
+            <b><br>3.6<br><br></b>
 
-        <ul>
-            <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index}}</li>
-        </ul>
+            <ul>
+                <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index}}</li>
+            </ul>
 
-        <b><br>3.7<br><br></b>
+            <b><br>3.7<br><br></b>
 
-        <ul>
-            <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index + 1}}</li>
-        </ul>
+            <ul>
+                <li v-for="(money, emp, index) in employees">{{emp}} - {{money}} - {{index + 1}}</li>
+            </ul>
 
-        <b><br>3.8<br><br></b>
+            <b><br>3.8<br><br></b>
 
-        <ul>
-            <!-- <li v-for="a in hrefs"><a href="{{a.href}}">{{a.text}}</a></li> -->
-        </ul>
+            <ul>
+                <!-- <li v-for="a in hrefs"><a href="{{a.href}}">{{a.text}}</a></li> -->
+            </ul>
 
-        <b><br>3.9<br><br></b>
+            <b><br>3.9<br><br></b>
 
-        <!-- <ul>
+            <!-- <ul>
             <li v-for="prod in products">{{prod.name}}, price: {{prod.price}}, summary: {{sumPrice(prod.price, prod.quantity)}} Пока не работает,
                 потом допилю</li>
         </ul> -->
 
-        <b><br>3.10<br><br></b>
+            <b><br>3.10<br><br></b>
 
-        <ul>
-            <div v-for="it in iteration">
-                <li>{{it}}</li>
-                <li></li>
-                <li></li><br>
-            </div>
-        </ul>
+            <ul>
+                <div v-for="it in iteration">
+                    <li>{{it}}</li>
+                    <li></li>
+                    <li></li><br>
+                </div>
+            </ul>
 
-        <!-- <b><br>4.1<br><br></b> -->
+            <!-- <b><br>4.1<br><br></b> -->
 
-        <!-- {{ show() }} -->
+            <!-- {{ show() }} -->
 
-        <b><br><br>4.2<br><br></b>
+            <b><br><br>4.2<br><br></b>
 
-        <!-- {{sumOfNums()}} -->
+            <!-- {{sumOfNums()}} -->
 
-        <b><br><br>4.3<br><br></b>
+            <b><br><br>4.3<br><br></b>
 
-        <button v-on:click="hello">hello</button>
+            <button v-on:click="hello">hello</button>
 
-        <b><br><br>4.4<br><br></b>
+            <b><br><br>4.4<br><br></b>
 
-        <button v-on:mouseover="hello">hello</button>
+            <b><span v-on:mouseover="hello">hello</span></b>
 
-        <b><br><br>4.4<br><br></b>
+            <b><br><br>4.4<br><br></b>
 
-        <button v-on:click="sumOfNums2">1+2+3</button>
+            <button v-on:click="sumOfNums2">1+2+3</button>
 
-        <b><br><br>5.1<br><br></b>
+            <b><br><br>5.1<br><br></b>
 
-        <span>{{text2}}</span><br>
-        <button v-on:click="textchange">Change text</button>
+            <span>{{text2}}</span><br>
+            <button v-on:click="textchange">Change text</button>
 
-        <b><br><br>5.2 / 5.3 / 5.4 / 5.5 / 5.6<br><br></b>
+            <b><br><br>5.2 / 5.3 / 5.4 / 5.5 / 5.6<br><br></b>
 
-        <!-- <button v-on:click=""></button> -->
+            <!-- <button v-on:click=""></button> -->
 
-        <button v-on:click="Add">Add "!!!" in array</button>
-        <button v-on:click="Remove">Remove first word in array</button>
-        <button v-on:click="Pop">Remove last word in array</button>
-        <button v-on:click="Reverse">Reverse array</button>
-        <button v-on:click="Sort">Sort array</button>
-        <ul>
-            <li>{{mas}}</li>
-        </ul>
+            <button v-on:click="Add">Add "!!!" in array</button>
+            <button v-on:click="Remove">Remove first word in array</button>
+            <button v-on:click="Pop">Remove last word in array</button>
+            <button v-on:click="Reverse">Reverse array</button>
+            <button v-on:click="Sort">Sort array</button>
+            <ul>
+                <li>{{mas}}</li>
+            </ul>
 
-        <b><br><br>5.7<br><br></b>
+            <b><br>5.7<br><br></b>
 
-        <ul>
-            <button v-on:click="Filter">Filter that array</button>
-            <li>{{lastarray}}</li>
-        </ul>
+            <ul>
+                <button v-on:click="Filter">Filter that array</button><button v-on:click="CtrlZ">Ctrl + Z</button>
+                <li>{{lastarray}}</li>
+            </ul>
 
-    </div>
+            <b><br>6.1<br><br></b>
+
+            <p>{{text}}</p><br>
+            <button v-on:click="changeUpperCase">Do</button>
+
+            <b><br>6.2<br><br></b>
+
+            <button v-on:click="sayHello('Вася')">Вася</button>
+            <button v-on:click="sayHello('Петя')">Петя</button>
+
+            <b><br>6.3<br><br></b>
+
+            <ul>
+                <li v-for="(mas, index) in mas" v-on:click="removeItem(index)">{{ mas }}</li>
+            </ul>
+
+            <b><br>6.4<br><br></b>
+
+            <ul>
+                <li v-for="(num, index2) in lastarray" v-on:click="NumSq(index2)">{{num}}</li>
+            </ul>
+
+        </div>
+    </h2>
 </body>
 
 </html>
@@ -235,9 +260,6 @@
                     this.text2 = "abcde"
                 }
             },
-            // textchange_12345: function () {
-            //     this.text2 = "12345"
-            // },
             Add: function () {
                 this.mas.push("!!!")
             },
@@ -262,7 +284,33 @@
                     }
                 })
                 this.lastarray = newarray
-            }
+            },
+            CtrlZ: function () {
+                this.lastarray = [1, 26, 4, -2, 0, 10, -15]
+            },
+            changeUpperCase: function () {
+                if (this.text == "hello") {
+                    this.upperCaseFirst();
+                    this.upperCaseSecond();
+                } else {
+                    this.text = "hello"
+                }
+            },
+            upperCaseFirst: function () {
+                this.text = "Hello"                     //this.text[0].toUpperCase() + this.text.substring(1);
+            },
+            upperCaseSecond: function () {
+                this.text = "HellO"                     //this.text[]
+            },
+            sayHello: function (name) {
+                alert('Hello, ' + name)
+            },
+            removeItem: function (index) {
+                this.mas.splice(index, 1)
+            },
+            NumSq: function (index2) {
+                this.lastarray[index2, 1] = this.lastarray[index2, 1] * this.lastarray[index2, 1]
+            },
 
         }
     })
